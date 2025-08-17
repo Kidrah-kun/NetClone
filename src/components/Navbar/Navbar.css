@@ -71,3 +71,10 @@
 .nav-dark{
     background: #141414;
 }
+.logout-btn{
+    cursor: pointer;
+    text-decoration: none;
+}
+.logout-btn:hover{
+    color: #e50914;
+}
