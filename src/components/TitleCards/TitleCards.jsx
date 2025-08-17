@@ -2,7 +2,7 @@ import React,{useEffect,useRef} from 'react'
 import './TitleCards.css'
 import Cards_data from '../../assets/cards/Cards_data'
 
-function TitleCards() {
+const TitleCards = ({title,category})=>{
 // for making the cards scrollable horizontally using mouse wheel
 const cardsRef = useRef();
 
@@ -16,7 +16,7 @@ useEffect(()=>{
 
   return (
     <div className='title-cards'>
-      <h2>Popular on Netflix</h2>
+      <h2>{title?title:"Popular on Netflix"}</h2>
       <div className="card-list" ref={cardsRef}>
         {Cards_data.map((card,index)=>{
           return <div className="card" key={index}>
